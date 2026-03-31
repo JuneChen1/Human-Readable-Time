@@ -1,2 +1,21 @@
-# Human-Readable-Time
-Codewars-Human Readable Time (Javascript)
+# Codewars-Human Readable Time (Javascript)
+
+```
+function humanReadable (seconds) {
+  const hours = Math.floor(seconds/3600);
+  seconds -= hours * 3600;
+  
+  const minutes = Math.floor(seconds/60);
+  const result = [hours, minutes, seconds % 60];
+  
+  result.forEach((item, index) => {
+    if (String(item).length < 2) {
+      result[index] = '0' + String(item);
+    }
+  })
+  
+  return result.join(':');
+}
+```
+
+[KATA](https://www.codewars.com/kata/52685f7382004e774f0001f7/javascript)
